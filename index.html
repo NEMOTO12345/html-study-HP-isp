@@ -13,6 +13,7 @@
 
     <!-- css -->
     <link rel="stylesheet" href="css/ress.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <!-- Charts.css -->
     <link rel="stylesheet" href="https://unpkg.com/charts.css/dist/charts.min.css">
@@ -51,8 +52,8 @@
 </head>
 <body>
     <header>
-        <p>IT、簿記、介護のビジネススクールISPアカデミーは就職・転職に有利な資格取得をサポートしています。</p>
-        <div class="isp-head">
+        <p class="header-comment">IT、簿記、介護のビジネススクールISPアカデミーは就職・転職に有利な資格取得をサポートしています。</p>
+        <div class="isp-header">
             <h1>ISP ACADEMY</h1>
             <p>
                 <form>
@@ -65,10 +66,12 @@
         </div>
         <nav>
             <ul>
+                <li>HOME</li>
                 <li>ISPについて</li>
                 <li>職業訓練</li>
                 <li>各種試験案内</li>
                 <li>アクセス</li>
+                <li>お問合せ</li>
             </ul>
         </nav>
     </header>
@@ -105,8 +108,18 @@
         </div>
         <div class="information-log">
             <table class="row">
-                <tr><th>名前</th><td>煌タロウ</td></tr>
-                <tr><th>職業</th><td>現役エンジニア</td></tr>
+                <tr>
+                    <th>施設見学のお申し込み</th>
+                    <td>授業の様子を見学できます。
+                        <br>平日(午前／午後)
+                        <br>随時開催中！
+                    </td>
+                    <td>お申し込みはこちら</td>
+                </tr>
+                <tr>
+                    <th>お電話でのご予約はこちらから</th>
+                    <td>049-247-8608</td>
+                </tr>
               </table>
         </div>
     </article>
@@ -114,38 +127,63 @@
         <div class="skil-map">
             <h1>試験会場案内</h1>
             <div>
-                <div class="skill-map-kawagoe"></div>
-                <div class="skill-map-wakaba"></div>
+                <div class="skill-map-kawagoe">
+                    <h1>川越校</h1>
+                    <p>〒350-1123</p>
+                    <p>埼玉県川越市脇田町24-3 ISPビル</p>
+                    <p>川越駅徒歩3分/本川越駅徒歩6分</p>
+                </div>
+                <div class="skill-map-wakaba">
+                    <h1>若葉駅前校</h1>
+                    <p>〒350-2201</p>
+                    <p>埼玉県鶴ヶ島市富士見1-1-8</p>
+                    <p>東部東上線若葉駅徒歩1分</p>
+                </div>
             </div>
-            <p>アクセスマップはこちら</p>
+            <p><a href="">アクセスマップはこちら</a></p>
         </div>
         <div class="skill-list">
             <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
+                <li>Microsoft Office Specialist</li>
+                <li>VBAエキスパート</li>
+                <li>日照PC検定試験</li>
+                <li>ビジネス英語検定試験</li>
+                <li>電子会計実務検定試験</li>
+                <li>ビジネスキーボード認定試験</li>
+                <li>キータッチ2000テスト</li>
+                <li>プログラミング検定試験</li>
+                <li>Webクリエイター能力検定試験</li>
+                <li>ビジネス統計スペシャリスト</li>
             </ul>
         </div>
     </article>
     <article class="Certification">
-        <h1>主な各種認定・推薦一覧</h1>
-        <div class="Certification-log1">
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
+        <div class="Certification-section1">
+            <h1>主な各種認定・推薦一覧</h1>
+            <div class="Certification-log1">
+                <img src="image/Certification01.jpg" alt="ネット検定ロゴ">
+                <img src="image/Certification02.jpg" alt="日照検定ロゴ">
+                <img src="image/Certification03.jpg" alt="officeロゴ">
+            </div>
+            <div class="Certification-log2">
+                <img src="image/Certification04.jpg" alt="サーティファイロゴ">
+                <img src="image/Certification05.jpg" alt="CBTSロゴ">
+                <img src="image/Certification06.jpg" alt="personロゴ">
+            </div>
         </div>
-        <div class="Certification-log2">
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
+        <div class="Certification-section2">
+            <h1>主な各種認定・推薦一覧</h1>
+            <div class="Certification-log3">
+                <img src="image/Certification07.jpg" alt="プラチナロゴ">
+                <img src="image/Certification08.jpg" alt="ウーマノミクスロゴ">
+                <img src="image/Certification09.jpg" alt="シニア活躍ロゴ">
+            </div>
+            <img src="image/link-log01.png" alt="受賞ロゴ">
+            <p>ispアカデミーは令和2年度</p>
+            <p>第16回さいたま輝き</p>
+            <p>を受賞しました。</p>
         </div>
+
     </article>
     <article class="link">
         <div class="link-list">
@@ -158,49 +196,46 @@
                 </ul>
             </div>
             <div class="link-list-access">
-                <h1>ispについて</h1>
+                <h1>アクセス</h1>
                 <ul>
-                    <li>会社概要</li>
-                    <li>ISPアカデミーの特徴</li>
-                    <li>事業案内</li>
+                    <li>ispアカデミー川越校</li>
+                    <li>ispアカデミー若葉駅</li>
+                    <li>isp保育ルーム</li>
                 </ul>
             </div>
             <div class="link-list-test">
-                <h1>ispについて</h1>
+                <h1>試験の案内</h1>
                 <ul>
-                    <li>会社概要</li>
-                    <li>ISPアカデミーの特徴</li>
-                    <li>事業案内</li>
+                    <li>お申し込みの流れ</li>
+                    <li>試験一覧</li>
                 </ul>
             </div>
             <div class="link-list-Course">
-                <h1>ispについて</h1>
+                <h1>パソコン・資格講座</h1>
                 <ul>
-                    <li>会社概要</li>
-                    <li>ISPアカデミーの特徴</li>
-                    <li>事業案内</li>
+                    <li>講座について</li>
+                    <li>講座の受講方法</li>
+                    <li>パソコン・資格講座コース一覧</li>
                 </ul>
             </div>
             <div class="link-list-training">
-                <h1>ispについて</h1>
+                <h1>埼玉県委託職業訓練</h1>
                 <ul>
-                    <li>会社概要</li>
-                    <li>ISPアカデミーの特徴</li>
-                    <li>事業案内</li>
+                    <li>受講生募集のお知らせ</li>
+                    <li>施設見学お申し込み</li>
                 </ul>
             </div>
             <div class="link-list-contact">
-                <h1>ispについて</h1>
                 <ul>
-                    <li>会社概要</li>
-                    <li>ISPアカデミーの特徴</li>
-                    <li>事業案内</li>
+                    <li>お問合せ・資料請求</li>
+                    <li>トピックス・お知らせ</li>
+                    <li>個人情報保護方針</li>
                 </ul>
             </div>
         </div>
         <div class="link-log">
-            <img src="" alt="">
-            <img src="" alt="">
+            <img src="image/link-log01.png" alt="プライバシーのロゴ">
+            <img src="image/link-log01.png" alt="GMOロゴ">
         </div>
     </article>
 </body>
