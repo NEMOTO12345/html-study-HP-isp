@@ -342,5 +342,18 @@ footer .link-list #h1{
     main img{
         max-width: 100%;
     }
+
+    .s1-create,.s1-job,.s1-skill{
+        font-size: 30%;
+        padding: 0;
+        margin: 0 5px;
+    }
+
+    .section2{
+        height: auto;
+    }
+    .s2-container{
+        display: block;
+    }
 }
 /* レスポンシブ */
