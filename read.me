@@ -5,3 +5,292 @@
 最大横幅1200px
 横のpaddingは5%
 
+●adjust.html&adjust.css
+ーheaderー
+①
+⑴inputタグにborderをつけて
+「google...」が表示されるようにplaceholderを追加。
+<input type="text" name="text" placeholder="Google 提供">
+
+⑵header nav のフォントサイズが120%だと幅750くらいではみ出るので100%に変更。それに伴いheadrの高さが空くので変更。
+
+header nav ul li{
+    border-left:1px solid #fff ;
+    border-right:1px solid #fff ;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 100%;　変更⑵
+}
+
+header{
+    width: 100%;
+    height:115px;　追加⑵
+}
+-.view-
+①
+・メインビジュアルをファーストビュー内に収めるようにする。
+↓メインビジュアルをブラウザ画面ぴったりになるように調整したい！
+https://design-webnote.com/css/visual-size/
+
+親
+height:calc(100vh - 96px);
+↑headerの高さをマイナスにして調整する。
+header{
+    width: 100%;
+    height:120px;
+}
+
+.view{
+    position: relative;
+    height: calc(100vh - 120px);
+    overflow: hidden;
+}
+
+子
+height:100%;
+↑親要素の幅に広がる
+overflow:hidden;
+↑親要素以上の高さを持つ子要素のはみ出た部分をなくす。
+.view img{
+    width: 100%;
+    height: 100%;
+}
+
+-.kind-
+①
+背景画像の全体が見えないので背景画像のサイズを小さくして見えるようにする。
+.kind-create,.kind-works,.kind-skill{
+
+    background-size:100%;
+}
+
+②
+⑴３つのセクションのうち３番目が高さが違うので調整する。
+⑵３つのセクション一つ一つが、小さく見える。幅いっぱいに広げる。
+⑶⑵で幅は広がったけど、画像の上の部分だけが見える。出来るだけ画像の中央が見えるようにしたい。
+⑷本当は⑴。画像が見えずらい。ぼやけている。画像が100%全て見えるようにしたい。
+
+.kind-create,.kind-works,.kind-skill{
+
+    padding: 20px 30px;
+    background-size:100%;　追加⑷
+    background-position: center;　追加⑶
+    margin: 20px 10px;
+    height: 180px;　追加⑴
+    width: 100%;　追加⑵
+}
+
+③
+背景画像を透明にする。
+.kind-create,.kind-works,.kind-skill{
+
+    padding: 20px 30px;
+    background-size:100%;
+    background-position: center;
+    margin: 20px 10px;
+    height: 180px;
+    width: 100%;
+    background-color: rgba(255,255,255,0.5);　追加⑶
+    background-blend-mode: lighten;　追加⑶
+  
+
+}
+
+④
+背景画像の上にあるテキストを中央に置く。
+.s1-job,.s1-skill,.s1-create{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+-information-
+①
+スクロールバーを表示させる。
+⑴親要素の高さを指定する。
+⑵親要素の高さに入らずに子要素がはみ出たら、overflow:scroll;でスクロールバーにする。
+⑶背景の色が下にも見えるようにしたいので、information-scrowlに背景色の親要素より小さい高さを指定。
+.information-in{
+    display: flex;
+    justify-content: space-around;
+    height:200px; 追加⑴
+}
+
+.information-in .information-scrowl{
+    background-color: #fff;
+    font-size: 70%;
+    overflow: scroll; 追加⑵
+    height: 180px;　追記⑶
+}
+
+②
+⑴１番の親要素に子要素がはみ出ないようにウィンドウ幅に高さを合わせるようにする。背景色が子要素によって隠れないようにpadding。
+.information{
+    background-color: #EEEEEE;
+    height: 100%;　追加⑴
+    padding: 20px 0; 追加⑴
+}
+⑵子要素information-scrollをスクロールさせるために高さを指定する。高さはskillセクションのマップセクションに合わせる。
+.information-in{
+    display: flex;
+    justify-content: center;
+    height: 367px;　追加⑵
+}
+⑶親要素の幅の60％を指定。高さはそのままでも親要素の高さを超えるので100％
+.information-in .information-scrowl{
+    background-color: #fff;
+    font-size: 70%;
+    overflow: scroll;
+    height: 100%;追加⑶
+    width: 60% 追加⑶
+}
+⑷幅は隣のスクロールコンテンツに対応するように30％。隣のコンテンツと接触しないようにマージン。
+.information-log{
+    width: 30%;　追加⑷
+    margin-left: 10px;　追加⑷
+}
+⑸テーブルのサイズが小さいので上の親要素で指定した幅いっぱいに広げる。
+table {
+    border: 1px solid #000;
+    background-color: #6495ED;
+    width: 100%; 追加⑸
+}
+
+-skill-
+①
+⑴アクセスマップ...を背景色を全体にするために、子要素aではなく親要素pに背景色、テキストの中央寄せを指定。
+⑵skill-mapにborderをひく。
+⑶スクロールさせるために親要素のskill-listの幅を子要素のskill-list ulより低く設定。
+⑷アクセスマップ...が次のセクションに接触しているので、全体の高さを出す。
+
+.skill-map-in h1,a{
+    background-color: #4169E1;　削除
+}
+
+.access-url{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #0000FF;　追加⑴
+    text-align: center;　追加⑴
+}
+
+
+.skill-map{
+    border: 1px solid #000;　追加⑵
+}
+
+.skill-list{
+    height: 220px;　追加⑶
+}
+
+.skill-list ul{
+    overflow: scroll;　追加⑶
+    height: 250px; 追加⑶
+}
+
+.skill{
+    height: 350px;追加⑷
+}
+
+はみ出るので一番の親要素の高さをウィンドウ幅に合わせるようにする。
+.skill{
+    height: 100%;
+    width: 100%;
+    padding: 20px 0;
+}
+マップコンテンツが左によっているので中央になるように設定。
+.skill-map-in{
+    display: flex;
+    justify-content: center;
+}
+隣のマップコンテンツに高さを揃えるように設定。幅は隣が60％なので30％で全体的にする。隣のマップにくっつくのでマージン左設定。
+.skill-list{
+    height:367px;
+    width: 30%;
+    margin-left: 10px;
+}
+高さを設定しなくとも、元々が親要素の高さ367を超えるので親要素の高さに合わせる形で。テキストを中央。背景色設定。
+.skill-list ul{
+    height: 100%;
+    overflow: scroll;
+    background-color: #EEEEEE;
+    text-align: center;
+}
+
+-Certification-
+①
+⑴fles-warpで幅が小さくなったときにロゴがはみ出さずに後ろに回るように設定。
+.Certification-log1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+⑵width50% marginautoをいらないので削除。
+.Certification-log2{
+    display: flex;
+    justify-content: center;
+}
+
+.Certification-log3{
+    display: flex;
+    justify-content: center;
+}
+
+● adjust.html&adjust.css classを変更
+article
+>section
+>>container
+>>>content
+
+-headrer-
+header-comment
+>header-title　タイトル
+
+isp-header
+>header-heading 見出し
+
+-view-
+view
+>main メインビジュアルの意味。他のホームページで使われていたので使用。
+view-catch
+>main-catch
+
+-kind-
+articleタグ
+>sectionタグ
+kind
+>section1
+kind-
+>s1-
+works 作品
+>job 仕事
+
+
+-information-
+.information
+>section2
+
+.information-in
+>s2-container
+
+.information-scroll
+>s2-content1
+
+.information-log
+>s2-content2
+
+-skill-
+
+skill
+>section3
+
+skill-in
+>s3-container
+
+skill-map
+>s3-content1
+
+skill-list
+>s3-content2

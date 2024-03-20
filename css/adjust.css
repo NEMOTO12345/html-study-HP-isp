@@ -1,0 +1,346 @@
+body{
+    scroll-behavior: smooth;
+}
+
+ul,ol{
+    list-style-type: none;
+    padding-left: 0;
+}
+#h1{
+    text-align: center;
+}
+/* header */
+/* to do
+・viewと共に高さを画面に合わせる */
+header{
+    width: 100%;
+    height:115px;
+}
+
+header label{
+    display: flex;
+}
+header .header-title{
+    font-size: 80%;
+}
+header .header-heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .header-heading h1{
+    margin: 0;
+}
+
+header .header-heading input{
+    display: block;
+    border: 1px solid #000;
+}
+
+header nav ul{
+    display: flex;
+    justify-content: center;
+    background-color: #0033FF;
+    border: 1px solid #000;
+    border-collapse: collapse;
+    margin: 0;
+}
+header nav ul li{
+    border-left:1px solid #fff ;
+    border-right:1px solid #fff ;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 100%;
+}
+/* header */
+
+/* view */
+/* to do
+・headerと共に高さを画面に合わせる */
+.main{
+    position: relative;
+    height: calc(100vh - 120px);
+    overflow: hidden;
+}
+
+.main img{
+    width: 100%;
+    height: 100%;
+}
+
+.main-catch{
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    color: #fff;
+    text-align: center;
+}
+
+.main-catch h1,.view-catch h2{
+    margin: 0;
+}
+
+.main-catch h2{
+    font-size: 120%;
+}
+/* view */
+
+/* kind */
+/* to do
+・背景画像を合わせる
+・ホームページ作成の高さを調整*/
+.section1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.s1-create,.s1-job,.s1-skill{
+
+    padding: 20px 30px;
+    background-size:100%;
+    background-position: center;
+    margin: 20px 10px;
+    height: 180px;
+    width: 100%;
+    background-color: rgba(255,255,255,0.5);
+    background-blend-mode: lighten;
+}
+
+.s1-job{
+    background-image: url(../image/kind-works.jpg);
+}
+
+.s1-job,.s1-skill,.s1-create{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.s1-skill{
+    background-image: url(../image/kind-skill.jpg);
+}
+
+.s1-create{
+    background-image: url(../image/kind-create.jpg);
+}
+/* kind */
+
+/* information */
+/* to do 
+・inとscrowlを真ん中に来るように
+・scrowlするようにする*/
+.section2{
+    background-color: #EEEEEE;
+    height: 100%;
+    padding: 20px 0;
+}
+.s2-container{
+    display: flex;
+    justify-content: center;
+    height: 367px;
+}
+.s2-container .s2-content1{
+    background-color: #fff;
+    font-size: 70%;
+    overflow: scroll;
+    height: 100%;
+    width: 60%;
+}
+.s2-content2{
+    width: 30%;
+    margin-left: 10px;
+}
+table {
+    border: 1px solid #000;
+    background-color: #6495ED;
+    width: 100%;
+}
+.row1{
+    background-color:#0000FF ;
+}
+.row2{
+    background-color: #fff;
+}
+.row3{
+    background-color: yellow;
+}
+.row4{
+    background-color: #4169E1;
+}
+th,td{
+    display: block;
+    text-align: center;
+}
+/* information */
+
+/* skill 
+・mapを載せる*/
+
+.section3{
+    height: 100%;
+    width: 100%;
+    padding: 20px 0;
+}
+.section3 .s3-container{
+    display: flex;
+    justify-content: center;
+}
+
+.s3-content1{
+    border: 1px solid #000;
+    height: 100%;
+    width: 60%;
+}
+
+.skill-map-kawagoe h1,.skill-map-wakaba h1{
+    text-align: center;
+    background-color: #6495ED;
+    color: #fff;
+    font-size: 15px;
+    height: 24px; 
+    /* ↑アクセスマップの高さに合わせる */
+}
+
+.skill-map-in{
+    display: flex;
+    justify-content: space-around;
+}
+
+.skill-map-in img{
+    width: 100%;
+}
+
+.access-url{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #6495ED;
+    text-align: center;
+}
+
+.access-url a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.s3-content2{
+    height:367px;
+    width: 30%;
+    margin-left: 10px;
+}
+
+.s3-content2 ul{
+    height: 100%;
+    overflow: scroll;
+    background-color: #EEEEEE;
+    text-align: center;
+}
+
+
+/* skill */
+
+/* Certification */
+.section4{
+    width: 100%;
+    padding:20px 0;
+}
+
+.s4-container1,.s4-container2{
+    width: 100%;
+    margin: auto;
+}
+
+.s4-container1{
+    border: 20px solid #6495ED;
+    padding: 20px 0;
+}
+
+.s4-container2{
+    padding: 20px 0;
+}
+
+.s4-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.s4-content img{
+    margin: 0 10px;
+}
+
+.s4-content .selection-log p{
+    font-size: 30%;
+}
+
+
+/* Certification */
+
+/* footer */
+footer .link-list{
+    font-size: 90%;
+    width: 100%;
+}
+
+footer .link-list #h1{
+    font-size: 15px;
+    background-color: #00000060;
+    color: #fff;
+}
+
+.link-list-in{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+
+.link-list-in h1{
+    font-size: 100%;
+}
+/* footer */
+
+/* copyright */
+.copyright{
+    text-align: center;
+    font-size:10px;
+    background-color: #6495ED;
+}
+/* copyright */
+
+/* レスポンシブ */
+@media(max-width:500px){
+    header{
+        height: 100%;
+    }
+    header form{
+        display: none;
+    }
+    
+    header nav ul{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    header nav ul li{
+        border: 1px solid #000;
+    }
+
+    .main-catch{
+        font-size: 30%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    .main{
+        height: auto;
+    }
+    main img{
+        max-width: 100%;
+    }
+}
+/* レスポンシブ */
